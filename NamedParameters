@@ -1,0 +1,29 @@
+//NamedParameters
+
+
+class Program
+{
+    static int Sum(int a, int b, bool enableLogging = false)
+    {
+        int result = a + b;
+
+        if (enableLogging)
+        {
+            Console.WriteLine("Value of variable a = " + a);
+            Console.WriteLine("Value of variable b = " + b);
+            Console.WriteLine("Result of summ = " + result);
+        }
+
+        return result;
+    }
+
+
+
+    static void Main(string[] args)
+    {
+        int firstValue = 5;
+        int secondValue = 10;
+
+        int result = Sum(enableLogging: true, b: secondValue, a: firstValue);
+    }
+}
